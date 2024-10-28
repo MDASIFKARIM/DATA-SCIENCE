@@ -1,0 +1,103 @@
+#L means integer L(50),string= TRUE OR FALSE,
+
+
+
+
+1+1
+2+3*4
+3^2
+sqrt(10)
+pi
+
+
+
+
+
+x<- 1                   #can define variable
+x                       #print any valu and select which valu print select valu and enter
+y<- 3                   #using "<-" operator to set valus
+z<- 4
+x*y*z                   #variable names are case sensitive
+#x+y+z                  #comment line single # multipul line comment 1st select line ande ctrl+shift+c
+
+
+
+# x<- 1                 
+# x                      
+# y<- 3                 # multipul line comment 1st select line ande ctrl+shift+c
+# z<- 4
+# x*y*z
+
+
+
+
+abs(x)
+sqrt(x)
+ceiling(x)
+floor(x)
+
+
+
+
+
+tolower("iamasif")
+toupper("iamasif")
+s<- "i am asif"
+strsplit(s,split="")
+
+
+
+
+
+X<-c(1,2,3,4,1,6,7)      #<-c vactor ues to multipul array
+min(X)
+max(X)
+sum(X)
+mean(X)
+mode(X)
+range(X)
+sd(X)
+
+
+
+
+
+nchar(s)                      #string lenth output show how much letter use
+
+
+
+
+str1<- "hi"
+str2<- "asif"
+paste(str1,str2)             #add 2 line string
+paste0(str1,str2)            #without space add string
+paste(str1,str2,sep = "")    #without space add string
+cat(str1,str2)               #add 2 line string
+
+
+
+
+
+str<- "i am asif,i am aiub student,i am happy"
+cat(str)                     #print string
+
+
+
+
+
+#######################if-else#####################
+
+a<- 80
+b<- 50
+if (a>b)
+{print("a is grater then b")}else     #stateman which position end then next stateman start
+  {print("a is not greater than b")
+}
+
+
+
+
+
+a<-200
+b<-33
+if (b>a {})
