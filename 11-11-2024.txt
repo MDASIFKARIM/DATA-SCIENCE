@@ -1,0 +1,120 @@
+#------------------------data frame-------------------------------
+
+prtientID<-c(1,2,3,4)
+age<-c(25,34,28,52)
+diabetes<-c("type1","type2","type1","type1")
+status<-c("poor","improved","excellent","poor")
+patientdata<-data.frame(patientID,age,diabetes,status)
+patientdata
+
+
+#add new colum
+
+patientdata$Blood.Group <- c("B-positive", "A-positive", "B-positive", "A-positive")  # Add Blood Group column
+patientdata
+
+
+#add new row
+
+new_row <- data.frame(
+  patientID = 5,
+  age = 40,
+  diabetes = "type2",
+  status = "improved",
+  Blood.Group = "O-positive"
+)
+patientdata <- rbind(patientdata, new_row)
+patientdata
+
+
+#delete ,update,
+
+
+
+
+#access tha frame on dataset
+
+
+patientdata[c("diabetes","status")]
+
+
+#factor function catagorise data 0 and 1
+
+
+#list
+g<-"my frist list"
+h<-c(25,26,18,39)
+j<-matrix(1:10,nrow=5)
+k<-c("one","two","three")
+mylist<-list(list(title=g,age=h,j,k))
+mylist
+
+
+
+#access list
+
+mylist[[2]]
+
+
+#add list items use "append" function
+new_title <- "my second list"
+new_age <- c(20, 30, 35, 28)
+new_matrix <- matrix(11:20, nrow=5)
+new_strings <- c("four", "five", "six")
+mylist <- append(mylist, list(list(title = new_title, age = new_age, j = new_matrix, k = new_strings)))
+
+mylist
+
+#remove list items
+
+mylist[[2]] <- NULL
+mylist
+
+
+
+#data input
+
+#user input  "readline"
+var1 = readline(prompt = "enter any valu:  ")
+var2 = readline(prompt = "enter any number:  ")
+
+var2 = as.integer(var2) #string valu convert integer valu
+print(var1)
+print(var2)
+
+
+#"scan"  continuously user input data.....dabul enter key press then close tasks
+
+x= scan()
+print(x)
+
+
+#diffierent type of data use what=double,"",
+
+
+
+#"edit" function use to manual data insert
+
+
+mydata<- data.frame(age=numeric(0),gender=character(0),weight=numeric(0))
+mydata<-edit(mydata)
+mydata
+
+
+
+
+#csv file create and read csv file
+
+write.csv(mydata)
+
+#save file in drive
+
+write.csv(mydata,"C:/edb/mydata.csv",row.names = FALSE)  #make csv file which drive i save 1st which drive i save copy the path, the file in this time remove back slase use fornt slase
+
+#read csv file
+mydatafram<-read.csv(file,header = logical_valu,sep = "delimiter")
+
+mydata<-read.csv("C:/edb/iris.csv",header =  TRUE,sep= ",")
+mydata
+
+
