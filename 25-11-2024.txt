@@ -1,0 +1,57 @@
+mydata<-read.csv("C:/New folder/iris.csv",header =  TRUE,sep= ",")
+mydata
+
+
+# variety  romove the colum
+
+vars <- c("sepal.length", "sepal.width", "petal.length", "petal.width")
+head(mydata[, vars])
+
+
+#descriptive statistics
+summary(mydata[vars])
+
+#annotation datasets
+
+mydata$variety <- factor(mydata$variety, levels = c("Setosa","Versicolor","Virginica"),labels = c(1, 2, 3))
+mydata
+
+
+
+
+str(mydata)
+
+#standard deviation
+
+s<-mydata$sepal.lengthcm
+sd(s)
+
+
+
+#detection null values for data set   use function is.na(mydata)
+mydata
+is.na(mydata)
+
+
+#counting number of null values in each colum
+
+colSums(is.na(mydata))
+
+
+
+#finding the specific row number of null values
+
+which(is.na(mydata$sepal.lengthcm))
+
+
+#na.omit function which valu null in dataset delete the ful row
+
+remove<-na.omit(mydata)
+
+
+#------------------------text dataset----------------
+#clean(@,$)
+#tokenization
+#stop words removal(varb,artica,the etc)
+#spell chaking
+#
