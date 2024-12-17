@@ -12,18 +12,18 @@ library(hunspell)      #spell checking and correcting misspelled words
  
 
 #read your text fle
-text <- read.table("F:/dd/file_name.txt", header = TRUE, sep = "\t", fill = TRUE) #file path and file name
+text <- read.table("F:/dd/file_name.txt", header = TRUE, sep = "\t", fill = TRUE)                    #file path and file name
 text
 
 
 
 
 #Text Cleaning
-text1 <- tolower(text)                            # Convert to lowercase                        
-text2 <- str_replace_all(text1, "[^[:alnum:][:space:]!,.]", " ") # Remove special characters except punctuation
-text3 <- removePunctuation(text2)        # Remove punctuation
-text4 <- removeNumbers(text3)            # Remove numbers
-text5 <- stripWhitespace(text4)          # Remove extra whitespace
+text1 <- tolower(text)                                                                              # Convert to lowercase                        
+text2 <- str_replace_all(text1, "[^[:alnum:][:space:]!,.]", " ")                                    # Remove special characters except punctuation
+text3 <- removePunctuation(text2)                                                                   # Remove punctuation
+text4 <- removeNumbers(text3)                                                                       # Remove numbers
+text5 <- stripWhitespace(text4)                                                                     # Remove extra whitespace
 text5
 
 
@@ -61,8 +61,8 @@ emoji_text
 
 
 #Spell Checking: Correct misspelled words
-corrected_text <- replace_internet_slang(expanded_text)  # Correct informal words/slangs
-corrected_text <- replace_misspelling(corrected_text)   # Correct misspellings
+corrected_text <- replace_internet_slang(expanded_text)                                             # Correct informal words/slangs
+corrected_text <- replace_misspelling(corrected_text)                                               # Correct misspellings
 corrected_text
 
 
