@@ -50,8 +50,12 @@ remove<-na.omit(mydata)
 
 
 #------------------------text dataset----------------
-#clean(@,$)
-#tokenization
-#stop words removal(varb,artica,the etc)
-#spell chaking
-#
+# Key Steps in Text Data Preprocessing:
+#Text Cleaning
+#Tokenization:
+#Normalization
+#Stop words Removal
+#Stemming and Lemmatization
+#Handling Contractions
+#Handling Emojis and Emoticons
+#Spell Checking
