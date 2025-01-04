@@ -1,26 +1,41 @@
-data <- read.csv("D:/ds f/sales.csv")
+data <- read.csv("D:/sales.csv")
 data
+
+
 
 data$branch <- as.factor(data$branch)
 data$branch
+
 data$city <- as.factor(data$city)
 data$city
+
 data$customer_type <- as.factor(data$customer_type)
 data$customer_type
+
 data$gender <- as.factor(data$gender)
 data$gender
+
 data$product_name <- as.factor(data$product_name)
 data$product_name
+
 data$product_category <- as.factor(data$product_category)
 data$product_category
 
+
+
 summary(data)
+
+
 
 sapply(data, function(x) sum(is.na(x)))
 
 
-#pearsons, chi-squared,mutual information Feature Selection
-cor(data$total_price, data$unit_price,data$quantity,data$tax,data$reward_points)
+
+       
+#pearsons
+correlation_matrix <- cor(data[, c("total_price", "unit_price", "quantity", "tax", "reward_points")])
+
+print(correlation_matrix)
 
 
 
